@@ -1,0 +1,689 @@
+body {
+    font-family: 'Noto Serif', serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+}
+h1,
+h2,
+h3 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: #00008B;
+}
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.navbar {
+    background-color: #00008B;
+    color: white;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+.navbar.scrolled {
+    background-color: #14a39a;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.navbar .container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    font-size: 28px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: #FFD700;
+    transition: transform 0.3s ease;
+}
+.logo:hover {
+    transform: scale(1.1);
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Noto Serif', serif;
+    font-weight: 700;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    padding: 8px 15px;
+    border-radius: 5px;
+    white-space: nowrap;
+}
+.nav-links li a:hover {
+    background-color: #FFD700;
+    color: #00008B;
+}
+.nav-links li a.active {
+    background-color: #FFD700;
+    color: #00008B;
+}
+.block {
+    padding: 40px 0;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.block.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+.geography {
+    background: linear-gradient(135deg, #F5F5DC, #FFE4E1);
+    margin-top: 65px;
+}
+.history {
+    background: linear-gradient(135deg, #D3D3D3, #E0E0E0);
+}
+.traditions {
+    background: linear-gradient(135deg, #FFFFFF, #F0F8FF);
+}
+.culture {
+    background: linear-gradient(135deg, #FFFAF0, #FFF0F5);
+}
+.facts {
+    background: linear-gradient(135deg, #ADD8E6, #87CEEB);
+}
+.attractions {
+    background: linear-gradient(135deg, #98FB98, #7CFC00);
+    margin-top: 65px;
+}
+.regions {
+    background: linear-gradient(135deg, #E0E0E0, #D3D3D3);
+}
+.festivals {
+    background: linear-gradient(135deg, #FFC0CB, #FF69B4);
+}
+.tips {
+    background: linear-gradient(135deg, #DEB887, #CD853F);
+}
+.visas {
+    background: linear-gradient(135deg, #87CEFA, #1E90FF);
+    margin-top: 65px;
+}
+.travel {
+    background: linear-gradient(135deg, #E0E0E0, #A9A9A9);
+}
+.budget {
+    background: linear-gradient(135deg, #98FB98, #32CD32);
+}
+.phrases {
+    background: linear-gradient(135deg, #FFE4E1, #FF6347);
+}
+.safety {
+    background: linear-gradient(135deg, #DEB887, #FFD700);
+}
+h2 {
+    margin-top: 0;
+    text-align: center;
+    font-size: 32px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #333;
+}
+.full-width {
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.mini-image {
+    width: 300px;
+    height: 200px;
+    margin-right: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+.mini-image:hover {
+    transform: scale(1.1);
+}
+.icon {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+.icon:hover {
+    transform: scale(1.1);
+}
+/* блоке Культура */
+.culture-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+.culture-item {
+    flex-basis: calc(33.33% - 20px);
+    box-sizing: border-box;
+    text-align: center;
+    padding: 10px;
+
+}
+.culture-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+.culture-item p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+}
+.culture-image:hover {
+    transform: scale(1.1);
+}
+/* Блок "Интересные факты" */
+.facts-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+.fact-item {
+    flex-basis: calc(25% - 20px);
+    text-align: center;
+    box-sizing: border-box;
+}
+.fact-item img {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+.fact-item img:hover {
+    transform: scale(1.1);
+}
+.fact-item p {
+    font-size: 14px;
+    margin-top: 10px;
+    color: #333;
+}
+/* History List */
+.history-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+.history-item {
+    flex-basis: calc(25% - 20px);
+    box-sizing: border-box;
+    position: relative;
+}
+.history-item img {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+.history-item img:hover {
+    transform: scale(1.1);
+}
+.history-item p {
+    font-size: 16px;
+    margin-top: 10px;
+    text-align: center;
+}
+/* Traditions List */
+.traditions-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+.tradition-item {
+    flex-basis: calc(33.33% - 20px);
+    box-sizing: border-box;
+    position: relative;
+    text-align: center;
+}
+.tradition-item p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.tradition-item img {
+    width: 100%;
+    height: 260px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba
+}
+.tradition-item img:hover {
+    transform: scale(1.1);
+}
+/* Топ достопримечательностей */
+.top-attractions {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.attraction-item {
+    text-align: center;
+    flex-basis: calc(25% - 20px);
+}
+
+.attraction-img {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.attraction-img:hover {
+    transform: scale(1.1);
+}
+
+/* Региональные особенности */
+.regions-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+.region {
+    flex-basis: calc(33.33% - 20px);
+    box-sizing: border-box;
+    position: relative;
+    text-align: center;
+}
+.region p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.region img {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+.region img:hover {
+    transform: scale(1.1);
+}
+.festivals-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+.fest-item {
+    flex-basis: calc(33.33% - 20px);
+    /* Рассчитываем гибкую основу с учётом промежутков */
+    box-sizing: border-box;
+    position: relative;
+    text-align: center;
+}
+.fest-item p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.fest-item img {
+    width: 100%;
+    height: 220px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+.fest-item img:hover {
+    transform: scale(1.1);
+}
+/* Практическая информация */
+.content-with-image {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.content-with-image img {
+    width: calc(33.33% - 20px);
+    height: 250px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+footer {
+    background-color: #14a39a;
+    color: #FFFFFF;
+    padding: 40px 0;
+}
+footer .container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.footer-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+.footer-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+.social-icons {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+.social-icons img:hover {
+    transform: scale(1.2);
+}
+.contact-form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    max-width: 500px;
+}
+.contact-form p {
+    font-size: 16px;
+    color: #FFFFFF;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.form-group {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+}
+.form-group label {
+    font-size: 14px;
+    color: #FFFFFF;
+    font-weight: 700;
+    width: 100px;
+}
+.form-group input,
+.form-group textarea {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #FFFFFF;
+}
+.contact-form button {
+    padding: 10px 20px;
+    background-color: #FFD700;
+    color: #14a39a;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+.contact-form button:hover {
+    background-color: #FFA500;
+    color: #FFFFFF;
+}
+.footer-left p {
+    font-size: 16px;
+    color: #FFFFFF;
+    margin: 0;
+}
+@media screen and (max-width: 992px) {
+    .container {
+        max-width: 900px;
+    }
+    .navbar .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .nav-links {
+        flex-direction: row;
+        gap: 10px;
+        margin-top: 20px;
+    }
+    .logo {
+        font-size: 24px;
+    }
+    .mini-image {
+        width: 200px;
+        height: px;
+    }
+    .attraction-img {
+        width: 100%;
+        height: 180px;
+    }
+    .facts-grid {
+        flex-wrap: wrap;
+    }
+    .fact-item {
+        flex-basis: calc(50% - 20px);
+    }
+    .culture-image {
+        width: 100%;
+        height: 190px;
+    }
+    .footer .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-left,
+    .footer-right {
+        width: 100%;
+    }
+    .contact-form {
+        width: 100%;
+        max-width: 360px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .container {
+        max-width: 680px;
+    }
+    .nav-links {
+        flex-direction: row;
+        gap: 5px;
+        margin-top: 20px;
+    }
+    .logo {
+        font-size: 22px;
+    }
+    .mini-image {
+        width: 200px;
+        height: 130px;
+    }
+    .attraction-img {
+        width: 90%;
+        height: 180px;
+    }
+    .facts-grid {
+        flex-wrap: wrap;
+    }
+    .fact-item {
+        flex-basis: calc(50% - 20px);
+    }
+    .top-attractions {
+        flex-wrap: wrap;
+    }
+    .attraction-item {
+        flex-basis: calc(50% - 20px);
+    }
+    .tradition-item {
+        flex-basis: calc(50% - 20px);
+    }
+    .icon {
+        flex-basis: calc(50% - 20px);
+    }
+    .history-list {
+        flex-wrap: wrap;
+    }
+    .history-item {
+        flex-basis: calc(50% - 20px);
+    }
+    .gallery {
+        width: 280px;
+        height: 185px;
+    }
+    .culture-item {
+        flex-basis: calc(50% - 20px);
+    }
+    .footer .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-left,
+    .footer-right {
+        width: 100%;
+    }
+    .contact-form {
+        width: 100%;
+        max-width: 300px;
+    }
+    .geography,
+    .attractions,
+    .visas {
+        margin-top: 85px;
+    }
+}
+@media screen and (max-width: 478px) {
+    .container {
+        max-width: 420px;
+    }
+    .nav-links {
+        flex-direction: column;
+        gap: 5px;
+    }
+    .logo {
+        font-size: 20px;
+    }
+    .mini-image {
+        width: 80%;
+        margin: 0 auto;
+        height: 110px;
+    }
+    .attraction-item {
+        flex-basis: 100%;
+    }
+    .attraction-img {
+        height: 220px;
+    }
+    .attraction-item h3 {
+        font-size: 18px;
+    }
+    .nav-links li a {
+        font-size: 14px;
+    }
+    .nav-links li {
+        margin-right: 10px;
+        padding-bottom: 10px;
+    }
+    .navbar {
+        position: relative;
+    }
+    .facts-grid {
+        flex-wrap: wrap;
+    }
+    .fact-item {
+        flex-basis: calc(100% - 20px);
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+    .сulture-image {
+        width: 230px;
+        height: 155px;
+    }
+    .tradition-item {
+        flex-basis: 100%;
+    }
+    .culture-item {
+        flex-basis: 100%;
+    }
+    .history-item {
+        flex-basis: 100%;
+    }
+    .footer .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-left,
+    .footer-right {
+        width: 100%;
+    }
+    .contact-form {
+        width: 100%;
+        max-width: 250px;
+    }
+    .regions-list,
+    .festivals-list {
+        flex-wrap: wrap;
+    }
+    .region,
+    .fest-item {
+        flex-basis: 100%;
+    }
+    .form-group input,
+    .form-group textarea {
+        width: 100%;
+    }
+     .geography,
+    .attractions,
+    .visas {
+        margin-top: 0px;
+    }
+    .attractions h2{;
+        font-size: 30px;
+    }
+    .content-with-image {
+        flex-direction: column;
+    }
+    .content-with-image img {
+        width: 80%;
+    }
+}
